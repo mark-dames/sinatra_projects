@@ -1,0 +1,18 @@
+.success {
+  padding: 10px;
+  background: green;
+}
+
+.error {
+  padding: 10px;
+  background: red;
+}
+
+body {
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+form.inline {
+  display: inline;
+}

@@ -1,0 +1,16 @@
+<h1>Contact information</h1>
+  <ul>
+    <% @contact.each do |type, value| %>
+      <li>
+        <%= type %>:
+        <p><%= value %></p>
+      </li>
+    <% end %>
+  </ul>
+
+<div>
+  <a href="/contacts/<%= params[:id] %>/edit">Edit contact</a>
+</div>
+<div>
+  <a href="/contacts">Go back to contacts page.</a>
+</div>

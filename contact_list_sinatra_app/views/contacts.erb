@@ -1,0 +1,13 @@
+<h1>Contact List</h1>
+  <ul>
+    <% @contacts.each do |id, contact|%>
+      <li><a href="/contacts/<%= id %>"><%= contact[:name] %></a><form class= "inline" method="post" action="/contacts/<%= id %>/delete"><button type="submit">Delete</button></form></li>
+    <% end %>
+  </ul>
+
+<div>
+  <p><a href="/contacts/add">Add a contact.</a></p>
+</div>
+<div>
+  <p><a href="/">Go back to main page.</a></p>
+</div>

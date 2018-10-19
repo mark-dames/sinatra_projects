@@ -1,0 +1,20 @@
+---
+admin:
+  password: "$2a$10$UtK2dkxtMBHo6s.cCln5L.oRWzkK9GFW.vrU9o8mfrpFh6sqxAh0a"
+  contacts:
+    1:
+      :name: Jessy
+      :street: test road
+      :housenumber: '44'
+      :postalcode: 1111 HH
+      :city: Amsterdam
+      :phonenumber: '0611111111'
+      :email: jessy@test.com
+paul:
+  password: !ruby/string:BCrypt::Password
+    str: "$2a$10$8iSzPBsQ1qHPUlxBY9u3YeBRQp74zWs3Cxq6F0wzU2pG/mSTFZalu"
+    version: 2a
+    cost: 10
+    salt: "$2a$10$8iSzPBsQ1qHPUlxBY9u3Ye"
+    checksum: BRQp74zWs3Cxq6F0wzU2pG/mSTFZalu
+  contacts: {}

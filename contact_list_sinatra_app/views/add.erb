@@ -1,0 +1,35 @@
+<form action="/contacts/create" method="post">
+  <p>Add a contact to your contact list.</p>
+  <div>
+    <label for="name">Name:
+      <input name="name" id="name" value="<%= params[:name] %>">
+    </label>
+  </div>
+  <div>
+    <label for="street">Street:
+      <input name="street" id="street" value="<%= params[:street] %>">
+    </label>
+     <label for="housenumber">House number:
+      <input name="housenumber" id="housenumber" value="<%= params[:housenumber] %>">
+    </label>
+  </div>
+  <div>
+    <label for="postalcode">Postal code:
+      <input name="postalcode" id="postalcode" value="<%= params[:postalcode] %>">
+    </label>
+    <label for="city">City:
+      <input name="city" id="city" value="<%= params[:city] %>">
+    </label>
+  </div>
+  <div>
+    <label for="phonenumber">Phone number:
+      <input name="phonenumber" id="phonenumber" value="<%= params[:phonenumber] %>">
+    </label>
+  </div>
+  <div>
+    <label for="email">Email:
+      <input name="email" id="email" value="<%= params[:email] %>">
+    </label>
+  </div>
+  <button type="submit">Add new contact.</button>
+</form>

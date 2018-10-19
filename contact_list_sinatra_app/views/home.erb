@@ -1,0 +1,9 @@
+<h1>Contact List</h1>
+
+<% if session[:username] %>
+  <p><a href="/contacts">View contacts.</a></p>
+  <p><form method="post" action="/users/signout"><button type="submit">Sign Out</button></form></p>
+<% else %>
+  <p><a href="/signin">Sign In</a></p>
+  <p><a href="/signup">Sign Up</a></p>
+<% end %>

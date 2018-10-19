@@ -1,0 +1,35 @@
+<form action="/contacts/<%= params[:id] %>/update" method="post">
+  <p>Edit contact.</p>
+  <div>
+    <label for="name">Name:
+      <input name="name" id="name" value="<%= params[:name] || @contact[:name] %>">
+    </label>
+  </div>
+  <div>
+    <label for="street">Street:
+      <input name="street" id="street" value="<%= params[:street] || @contact[:street] %>">
+    </label>
+     <label for="housenumber">House number::
+      <input name="housenumber" id="housenumber" value="<%= params[:housenumber] || @contact[:housenumber] %>">
+    </label>
+  </div>
+  <div>
+    <label for="postalcode">Postal code:
+      <input name="postalcode" id="postalcode" value="<%= params[:postalcode] || @contact[:postalcode] %>">
+    </label>
+    <label for="city">City:
+      <input name="city" id="city" value="<%= params[:city] || @contact[:city] %>">
+    </label>
+  </div>
+  <div>
+    <label for="phonenumber">Phone number:
+      <input name="phonenumber" id="phonenumber" value="<%=  params[:phonenumber] || @contact[:phonenumber] %>">
+    </label>
+  </div>
+  <div>
+    <label for="email">Email:
+      <input name="email" id="email" value="<%= params[:email] || @contact[:email] %>">
+    </label>
+  </div>
+  <button type="submit">Edit contact.</button>
+</form>

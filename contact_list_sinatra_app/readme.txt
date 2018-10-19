@@ -1,0 +1,3 @@
+This is a small contact list Sinatra app. You can create a profile and add contacts to your contact list. You can edit a contact and also delete a contact from the contact list. 
+Each user is stored in a YAML file. It contains the username, password and the contacts of that user.
+Each contact field send by the add and edit form will be checked for errors. An error message is shown when we enter wrong input. 
