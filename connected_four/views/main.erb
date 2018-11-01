@@ -1,0 +1,21 @@
+<h1>Welcome to Connected Four!</h1>
+
+<p class="message"><%= session.delete(:message) %></p>
+
+<form action="/create_game" method="post">
+  <div>
+    <label for="player_name">Enter your name:</label>
+    <input name="player_name" id="player_name" value="">
+  </div>
+  <div>
+    <input type="hidden" name="computer_name" value="<%= computer_name %>">
+  </div>
+   <div>
+     Choose Marker:
+     <input id"marker" type="radio" name="marker" value="Y" checked="checked">
+     <label for="marker">Yellow</label>
+     <input id"marker" type="radio" name="marker" value="R">
+     <label for="red">Red</label>
+  </div>
+  <button type="submit">Start the game!</button>
+</form>

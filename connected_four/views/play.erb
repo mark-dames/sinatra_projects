@@ -1,0 +1,37 @@
+<h1>Connected Four!</h1>
+
+<% if session[:result] %>
+  <p class="result"><%= session.delete(:result) %></p>
+  <form action="/play_agian" method="post">
+    <div>
+      Do you want to play agian?
+      <input id"answer" type="radio" name="answer" value="yes" checked="checked">
+      <label for="answer">yes</label>
+      <input id"answer" type="radio" name="answer" value="no">
+      <label for="answer">no</label>
+    </div>
+    <button type="submit">submit answer</button>
+  </form>
+<% else %>
+ <% if session[:welcome_message] %>
+    <pre><%= session.delete(:welcome_message) %></pre>
+  <% elsif session[:error] %>
+    <p class="error"><%= session.delete(:error) %></p>
+  <% end %>
+  
+  <p>You play with <%= @human_marker %> and <%= @computer_name %> plays with <%= @computer_marker %></p>
+  <p>Choose an available column to place your disc in:</p>
+  <p><%= human_player_choice %></p>
+
+  <form action="/place_disc" method="post">
+    <div>
+      <input name="human_player_column" value="<%= params[:human_player_column] %>">
+    </div>
+    <div>
+      <input type="hidden" name="computer_player_column" value="<%= computer_player_choice %>">
+    </div>
+    <button type="submit">Place Disc</button>
+  </form>
+<% end %>
+
+<pre><%= session[:board].display_board %></pre>

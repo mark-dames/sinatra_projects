@@ -1,0 +1,16 @@
+<form action="/create_game" method="post">
+  <div>
+    <input type="hidden" name="player_name" value="<%= session[:human_player].name %>">
+  </div>
+   <div>
+    <input type="hidden" name="computer_name" value="<%= computer_name %>">
+  </div>
+  <div>
+     Choose Marker:
+     <input id"marker" type="radio" name="marker" value="Y" checked="checked">
+     <label for="marker">Yellow</label>
+     <input id"marker" type="radio" name="marker" value="R">
+     <label for="red">Red</label>
+   </div>
+  <button type="submit">Play agian!</button>
+</form>
